@@ -88,18 +88,22 @@ class _HomeScreenState extends State<HomeScreen> {
               right: 10,
               left: 10,
               bottom: 20,
-            ), 
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 LabelForList("IPHONE"),
-                const SizedBox(height: 15,),
+                const SizedBox(
+                  height: 15,
+                ),
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
@@ -108,20 +112,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
-                const SizedBox(height: 30,),
+                const SizedBox(
+                  height: 30,
+                ),
                 LabelForList("ANDROID"),
-                const SizedBox(height: 15,),
+                const SizedBox(
+                  height: 15,
+                ),
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
@@ -130,20 +142,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
-                const SizedBox(height: 30,),
+                const SizedBox(
+                  height: 30,
+                ),
                 LabelForList("SMART WATCH"),
-                const SizedBox(height: 15,),
+                const SizedBox(
+                  height: 15,
+                ),
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
@@ -152,20 +172,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
-                const SizedBox(height: 30,),
+                const SizedBox(
+                  height: 30,
+                ),
                 LabelForList("MACT TABLET"),
-                const SizedBox(height: 15,),
+                const SizedBox(
+                  height: 15,
+                ),
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
@@ -174,20 +202,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
-                const SizedBox(height: 30,),
+                const SizedBox(
+                  height: 30,
+                ),
                 LabelForList("LAPTOP"),
-                const SizedBox(height: 15,),
+                const SizedBox(
+                  height: 15,
+                ),
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
@@ -196,20 +232,28 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
-                const SizedBox(height: 30,),
+                const SizedBox(
+                  height: 30,
+                ),
                 LabelForList("DESKTOP MAC"),
-                const SizedBox(height: 15,),
+                const SizedBox(
+                  height: 15,
+                ),
                 Container(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),
@@ -218,8 +262,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "14500000" ),
-                      ProductCard(context, "lib/images/download.jpg" ,"Điện thoại hiếm", "24500000" ),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "14500000"),
+                      ProductCard(context, "lib/images/download.jpg",
+                          "Điện thoại hiếm", "24500000"),
                     ],
                   ),
                 ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'account_screen/account_screen.dart';
 import 'cart_screen/cart_screen.dart';
 import 'home_screen/home_screen.dart';
+import 'notification/notification_screen.dart';
 
 class PageContent extends StatefulWidget {
   const PageContent({Key? key}) : super(key: key);
@@ -13,8 +15,8 @@ class _PageContentState extends State<PageContent> {
   static List<Widget> listBody = <Widget>[
     HomeScreen(),
     CartScreen(),
-    const Text("Notificaton"),
-    const Text("User"),
+    notification(),
+    AccountScreen(),
   ];
 
   int _currentIndex = 0;

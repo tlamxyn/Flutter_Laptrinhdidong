@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop/Screens/productdetail_screen/productdetail_screen.dart';
 
 Container LabelForList(String label) {
   return Container(
@@ -74,6 +75,7 @@ Material CategoryCard(BuildContext context, String svg_icon, String label) {
     ),
   );
 }
+
 Material ProductCard(
     BuildContext context, String image, String name, String price) {
   return Material(
@@ -92,7 +94,10 @@ Material ProductCard(
       ),
       child: Material(
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ProductDetailScreen()));
+          },
           child: Column(
             children: [
               Container(

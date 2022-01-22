@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/Screens/thanhtoan_screen/thanhtoan_screen.dart';
 
 Container NoCartItemNotification(BuildContext context) {
   return Container(
@@ -15,73 +16,69 @@ Container NoCartItemNotification(BuildContext context) {
 
 Container CartItem(BuildContext context) {
   return Container(
-    padding: const EdgeInsets.only(top: 15, right: 10, bottom: 15, left: 10),
+    margin: EdgeInsets.symmetric(horizontal: 15),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      border: Border.all(color: Colors.blue),
+    ),
     width: MediaQuery.of(context).size.width,
-    height: 150,
-    child: Column(
+    height: MediaQuery.of(context).size.height * 0.15,
+    child: Stack(
       children: [
-        Container(
-          alignment: Alignment.topRight,
-          width: double.infinity,
-          height: 1,
-          child: const Icon(Icons.cancel),
-        ),
-        Container(
-          color: Colors.amber[200],
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                width: 40,
-                child: Checkbox(
-                  value: false,
-                  onChanged: (bool? value) {},
-                ),
-              ),
-              Container(
-                height: 85,
-                alignment: Alignment.center,
-                child: Image.asset(
-                  "lib/images/download.jpg",
-                  width: 80,
-                  height: 80,
-                ),
-              ),
-              Container(
-                height: 85,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(left: 10, top: 10),
-                      child: const Text(
-                        "Iphone siêu xịn, dễ vỡ, đang giảm giá khủng",
-                        softWrap: true,
-                        style: TextStyle(),
-                      ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Checkbox(value: true, onChanged: (value) {}),
+            Image.asset("lib/images/download.jpg",
+                width: MediaQuery.of(context).size.width / 3),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 5, right: 20),
+                    child: Text(
+                      "Điện thoại ",
+                      style: TextStyle(fontSize: 16),
                     ),
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: const [
-                          Text(
-                            "2,000,000  Đ",
-                            style: TextStyle(color: Colors.red),
-                          ),
-                        ]),
-                  ],
-                ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 5),
+                        child: QuanlityButton(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(right: 20),
+                        child: Text(
+                          "Giá",
+                          style: TextStyle(color: Colors.red, fontSize: 16),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        Container(),
+        const Positioned(
+            top: -15,
+            right: -15,
+            child: IconButton(
+                onPressed: (null),
+                icon: Icon(
+                  Icons.cancel_outlined,
+                  color: Colors.red,
+                ))),
       ],
     ),
   );
 }
 
-Container CartBottomBar() {
+Container CartBottomBar(BuildContext context) {
   return Container(
     height: 35,
     child: Row(
@@ -126,16 +123,41 @@ Container CartBottomBar() {
           width: 5,
         ),
         Container(
-          color: Colors.yellow,
-          child: const Text(
-            "MUA HÀNG",
-            style: TextStyle(
-              color: Color(0xFF4A148C),
-              fontSize: 35,
-              fontWeight: FontWeight.bold,
+          child: TextButton(
+            style: TextButton.styleFrom(
+              primary: Colors.red,
+              backgroundColor: Colors.yellow,
+            ),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => thanhtoanScreen()));
+            },
+            child: const Text(
+              "MUA HÀNG",
+              style: TextStyle(
+                color: Color(0xFF4A148C),
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
+      ],
+    ),
+  );
+}
+
+Widget QuanlityButton() {
+  return Container(
+    child: Row(
+      children: [
+        IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+        Container(
+          alignment: Alignment.center,
+          width: 20,
+          child: Text("1"),
+        ),
+        IconButton(onPressed: () {}, icon: Icon(Icons.add)),
       ],
     ),
   );
