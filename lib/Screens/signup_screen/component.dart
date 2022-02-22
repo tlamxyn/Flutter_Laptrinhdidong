@@ -6,87 +6,141 @@ import 'package:shop/Screens/thanhtoan_screen/thanhtoan_screen.dart';
 
 import '../main_content.dart';
 
-Container dangky1(BuildContext context) {
+Container TenApp(String name, BuildContext context) {
   return Container(
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 10,
+    height: MediaQuery.of(context).size.height / 8,
     width: double.infinity,
-    color: Colors.purple[300],
     child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.payment),
-        ),
-        const Padding(
-          padding: EdgeInsets.only(top: 15, right: 10, bottom: 15, left: 80),
-          child: Text(
-            "My App",
-            style: TextStyle(color: Colors.black, fontSize: 25),
+        Text(
+          name,
+          style: TextStyle(
+            fontSize: 60,
+            foreground: Paint()
+              ..style = PaintingStyle.stroke
+              ..strokeWidth = 3
+              ..color = Colors.white60,
           ),
-        ),
-        const Padding(
-          padding: EdgeInsets.all(40),
         ),
       ],
     ),
   );
 }
 
-Padding dangky2(BuildContext context) {
-  return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'User Name',
+TextField Nhap_Username(BuildContext context) {
+  return TextField(
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: Colors.white,
+      border: OutlineInputBorder(),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
       ),
+      enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
+      ),
+      labelText: 'User Name',
+    ),
+  );
+}
+TextField Nhap_Email(BuildContext context) {
+  return TextField(
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: Colors.white,
+      border: OutlineInputBorder(),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
+      ),
+      enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
+      ),
+      labelText: 'Email',
+    ),
+  );
+}
+TextField Nhap_Password(BuildContext context) {
+  return TextField(
+    style: TextStyle(color: Color(0xFFbdc6cf)),
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: Colors.white,
+      contentPadding:
+          const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
+      ),
+      enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
+      ),
+      labelText: 'Password',
     ),
   );
 }
 
-Padding dangky3(BuildContext context) {
-  return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Password',
+TextField Nhap_lai_Password(BuildContext context) {
+  return TextField(
+    style: TextStyle(color: Color(0xFFbdc6cf)),
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: Colors.white,
+      contentPadding:
+          const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
       ),
+      enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
+      ),
+      labelText: 'Confirm Password',
     ),
   );
 }
 
-Padding dangky4(BuildContext context) {
-  return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Confirm',
-      ),
-    ),
-  );
-}
-
-Padding dangky5(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(0),
-    child: ElevatedButton(
-      style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
-      onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => dangnhap()));
-      },
-      child: const SizedBox(
-        child: Center(
-          child: Text("Đăng ký"),
+ElevatedButton Dang_ky(BuildContext context) {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
+    onPressed: () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => PageContent()));
+    },
+    child: const SizedBox(
+      child: Center(
+        child: Text(
+          "Đăng ký",
+          style: TextStyle(fontSize: 16),
         ),
-        height: 53,
-        width: 260,
       ),
+      height: 53,
+      width: 260,
+    ),
+  );
+}
+
+ElevatedButton TroLai(BuildContext context) {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(primary: Colors.blue[700]),
+    onPressed: () {
+      Navigator.pop(context);
+    },
+    child: const SizedBox(
+      child: Center(
+        child: Icon(
+          Icons.arrow_back,
+        ),
+      ),
+      height: 53,
+      width: 260,
     ),
   );
 }

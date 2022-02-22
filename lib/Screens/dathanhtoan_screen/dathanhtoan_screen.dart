@@ -18,7 +18,7 @@ class _dathanhtoanState extends State<dathanhtoan> {
         children: [
           dathanhtoan1(context),
           dathanhtoan2(context),
-          dathanhtoan3(context),
+          dathanhtoan2(context),
           dathanhtoan4(context),
           dathanhtoan5(context),
           dathanhtoan6(context),

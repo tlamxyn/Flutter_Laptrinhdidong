@@ -14,19 +14,27 @@ class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      body: Padding(padding: EdgeInsets.symmetric(horizontal: 15),child: ListView(
         children: [
-          Account1(context),
-          Account2(context),
-          Account3(context),
-          Account4(context),
-          Account5(context),
-          Account6(context),
-          Account7(context),
-          Account8(context),
-          //CartItem(context),
+          ID_user(context, "Id:0306191386"),
+          Divider(color: Colors.white, height: 10),
+          HoaDon(context),
+          Divider(color: Colors.grey[400], height: 5),
+          ThongTinNguoiDung(context, "Họ và tên: Đặng Trần Lam"),
+          Divider(color: Colors.grey[400], height: 5),
+          ThongTinNguoiDung(context, "Giới tính: Nam"),
+          Divider(color: Colors.grey[400], height: 5),
+          ThongTinNguoiDung(context, "SĐT: 0352966746"),
+          Divider(color: Colors.grey[400], height: 5),
+          ThongTinNguoiDung(context, "Ngày sinh: 2/6/2001"),
+          Divider(color: Colors.grey[400], height: 5),
+          ThongTinNguoiDung(context, "Email: tlamxyn@gmail.com"),
+          Divider(color: Colors.grey[400], height: 5),
+          ThongTinNguoiDung(context, "Địa chỉ:"),
+          Divider(color: Colors.grey[400], height: 5),
+
         ],
-      ),
+      )),
     );
   }
 }

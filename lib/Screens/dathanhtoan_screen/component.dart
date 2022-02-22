@@ -36,8 +36,7 @@ Container dathanhtoan1(BuildContext context) {
 
 Container dathanhtoan2(BuildContext context) {
   return Container(
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 8,
+    margin: EdgeInsets.all(15),
     width: double.infinity,
     color: Colors.white70,
     child: Row(
@@ -49,7 +48,6 @@ Container dathanhtoan2(BuildContext context) {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                height: 200,
                 alignment: Alignment.center,
                 child: Image.asset(
                   "lib/images/download.jpg",
@@ -66,94 +64,7 @@ Container dathanhtoan2(BuildContext context) {
               ),
               Container(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(top: 10, bottom: 10),
-                      child: const Text(
-                        "Máy tính Mac",
-                        style: TextStyle(color: Colors.black, fontSize: 30),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text("đơn giá:"),
-                        const Padding(
-                          padding: EdgeInsets.all(9),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.all(6),
-                        ),
-                        Text(
-                          "20.000.000 đ",
-                          style: TextStyle(
-                            color: Colors.red,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
-                        Text("Tổng tiền:"),
-                        const Padding(
-                          padding: EdgeInsets.all(10),
-                        ),
-                        Text(
-                          "20.000.000 đ",
-                          style: TextStyle(
-                            color: Colors.red,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
-Container dathanhtoan3(BuildContext context) {
-  return Container(
-    margin: EdgeInsets.only(
-      top: 10,
-    ),
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 8,
-    width: double.infinity,
-    color: Colors.white70,
-    child: Row(
-      children: [
-        Container(
-          color: Colors.white70,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: 200,
-                alignment: Alignment.center,
-                child: Image.asset(
-                  "lib/images/download.jpg",
-                  height: 70,
-                  width: 70,
-                ),
-              ),
-              const Text(
-                "SL:1",
-                style: TextStyle(color: Colors.black, fontSize: 20),
-              ),
-              const Padding(
-                padding: EdgeInsets.all(30),
-              ),
-              Container(
-                child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(

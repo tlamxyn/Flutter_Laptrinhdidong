@@ -6,95 +6,153 @@ import 'package:shop/Screens/thanhtoan_screen/thanhtoan_screen.dart';
 
 import '../main_content.dart';
 
-Container dangnhap1(BuildContext context) {
+Container TenApp(String name, BuildContext context) {
   return Container(
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 10,
+    height: MediaQuery.of(context).size.height / 8,
     width: double.infinity,
-    color: Colors.purple[300],
     child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.payment),
-        ),
-        const Padding(
-          padding: EdgeInsets.only(top: 15, right: 10, bottom: 15, left: 80),
-          child: Text(
-            "My App",
-            style: TextStyle(color: Colors.black, fontSize: 25),
+        Text(
+          name,
+          style: TextStyle(
+            fontSize: 60,
+            foreground: Paint()
+              ..style = PaintingStyle.stroke
+              ..strokeWidth = 3
+              ..color = Colors.white60,
           ),
-        ),
-        const Padding(
-          padding: EdgeInsets.all(40),
         ),
       ],
     ),
   );
 }
 
-Padding dangnhap2(BuildContext context) {
-  return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'User Name',
+TextField Nhap_Email(BuildContext context) {
+  return TextField(
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: Colors.white,
+      border: OutlineInputBorder(),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
       ),
+      enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
+      ),
+      labelText: 'Email',
     ),
   );
 }
 
-Padding dangnhap3(BuildContext context) {
-  return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Password',
+TextField Nhap_Password(BuildContext context) {
+  return TextField(
+    style: TextStyle(color: Color(0xFFbdc6cf)),
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: Colors.white,
+      contentPadding:
+          const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
       ),
+      enabledBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+        borderRadius: BorderRadius.circular(25.7),
+      ),
+      labelText: 'Password',
     ),
   );
 }
 
-Padding dangnhap4(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(0),
-    child: ElevatedButton(
-      style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
-      onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => PageContent()));
-      },
-      child: const SizedBox(
-        child: Center(
-          child: Text("Đăng nhập"),
+ElevatedButton Dang_nhap(BuildContext context) {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
+    onPressed: () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => PageContent()));
+    },
+    child: const SizedBox(
+      child: Center(
+        child: Text(
+          "Đăng nhập",
+          style: TextStyle(fontSize: 16),
         ),
-        height: 53,
-        width: 260,
       ),
+      height: 53,
+      width: 260,
     ),
   );
 }
 
-Padding dangnhap5(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(30),
-    child: ElevatedButton(
-      style: ElevatedButton.styleFrom(primary: Colors.black),
-      onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => dangky()));
-      },
-      child: const SizedBox(
-        child: Center(
-          child: Text("Chưa có tài khoản"),
+ElevatedButton Dang_nhap_bang_facebook(BuildContext context) {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
+    onPressed: () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => PageContent()));
+    },
+    child: SizedBox(
+      child: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.facebook, size: 30,),
+            SizedBox(width: 10,),
+            Text(
+              "Đăng nhập bằng Facebook",
+              style: TextStyle(fontSize: 16),
+            ),
+          ],
         ),
-        height: 53,
-        width: 260,
       ),
+      height: 53,
+    ),
+  );
+}
+
+ElevatedButton Dang_nhap_bang_email(BuildContext context) {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
+    onPressed: () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => PageContent()));
+    },
+    child: SizedBox(
+      child: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.email, size: 30,),
+            SizedBox(width: 10,),
+            Text(
+              "Đăng nhập bằng Email",
+              style: TextStyle(fontSize: 16),
+            ),
+          ],
+        ),
+      ),
+      height: 53,
+    ),
+  );
+}
+
+ElevatedButton Chua_co_tai_khoan(BuildContext context) {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(primary: Colors.black),
+    onPressed: () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => dangky()));
+    },
+    child: const SizedBox(
+      child: Center(
+        child: Text("Chưa có tài khoản"),
+      ),
+      height: 53,
     ),
   );
 }

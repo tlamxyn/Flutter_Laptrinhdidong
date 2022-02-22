@@ -19,7 +19,7 @@ class _CartScreenState extends State<CartScreen> {
         children: [
           Expanded(
             child: ListView(children: [
-              NoCartItemNotification(context),
+              
               CartItem(context),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
