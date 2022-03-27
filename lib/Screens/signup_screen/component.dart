@@ -56,9 +56,25 @@ Container DangKyButton(BuildContext context) {
         child: Center(
           child: Text("Đăng ký"),
         ),
-        height: 53,
-        width: 260,
       ),
+    ),
+  );
+}
+
+ElevatedButton TroLai(BuildContext context) {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(primary: Colors.blue[700]),
+    onPressed: () {
+      Navigator.pop(context);
+    },
+    child: const SizedBox(
+      child: Center(
+        child: Icon(
+          Icons.arrow_back,
+        ),
+      ),
+      height: 53,
+      width: 260,
     ),
   );
 }

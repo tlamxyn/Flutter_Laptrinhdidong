@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop/Screens/thanhtoan_screen/thanhtoan_screen.dart';
+
 import 'component.dart';
 
 class ProductDetailScreen extends StatefulWidget {

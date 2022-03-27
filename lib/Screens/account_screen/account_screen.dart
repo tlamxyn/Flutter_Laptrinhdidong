@@ -14,7 +14,7 @@ class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      body: Padding(padding: EdgeInsets.symmetric(horizontal: 15),child: ListView(
         children: [
           UserTile(context),
           toHoaDon(context),
@@ -25,7 +25,7 @@ class _AccountScreenState extends State<AccountScreen> {
           Info(context, "Địa chỉ: TP.HCM"),
           //CartItem(context),
         ],
-      ),
+      )),
     );
   }
 }

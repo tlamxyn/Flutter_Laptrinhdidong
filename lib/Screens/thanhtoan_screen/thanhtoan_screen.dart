@@ -17,7 +17,7 @@ class _thanhtoanScreenState extends State<thanhtoanScreen> {
     return Scaffold(
       body: ListView(
         children: [
-          thanhtoan1(context),
+          Tieu_De(context),
           thanhtoan3(context),
           // thanhtoan4(context),
           thanhtoan5(context),

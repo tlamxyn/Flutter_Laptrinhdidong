@@ -59,8 +59,6 @@ Container dangnhap4(BuildContext context, String a, String b) {
         child: Center(
           child: Text("Đăng nhập"),
         ),
-        height: 53,
-        width: 260,
       ),
     ),
   );
@@ -83,9 +81,49 @@ Container dangnhap5(BuildContext context) {
         child: Center(
           child: Text("Chưa có tài khoản"),
         ),
-        height: 53,
-        width: 260,
       ),
+    ),
+  );
+}
+
+ElevatedButton Dang_nhap_bang_email(BuildContext context) {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
+    onPressed: () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => PageContent()));
+    },
+    child: SizedBox(
+      child: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.email, size: 30,),
+            SizedBox(width: 10,),
+            Text(
+              "Đăng nhập bằng Email",
+              style: TextStyle(fontSize: 16),
+            ),
+          ],
+        ),
+      ),
+      height: 53,
+    ),
+  );
+}
+
+ElevatedButton Chua_co_tai_khoan(BuildContext context) {
+  return ElevatedButton(
+    style: ElevatedButton.styleFrom(primary: Colors.black),
+    onPressed: () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => dangky()));
+    },
+    child: const SizedBox(
+      child: Center(
+        child: Text("Chưa có tài khoản"),
+      ),
+      height: 53,
     ),
   );
 }

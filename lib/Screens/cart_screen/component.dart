@@ -53,7 +53,7 @@ Container CartItem(BuildContext context) {
                       Padding(
                         padding: EdgeInsets.only(right: 20),
                         child: Text(
-                          "Giá",
+                          "10,000,000 đ",
                           style: TextStyle(color: Colors.red, fontSize: 16),
                         ),
                       ),
@@ -119,9 +119,7 @@ Container CartBottomBar(BuildContext context) {
             ),
           ),
         ),
-        const SizedBox(
-          width: 5,
-        ),
+        
         Container(
           child: TextButton(
             style: TextButton.styleFrom(
@@ -136,7 +134,7 @@ Container CartBottomBar(BuildContext context) {
               "MUA HÀNG",
               style: TextStyle(
                 color: Color(0xFF4A148C),
-                fontSize: 15,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -151,13 +149,14 @@ Widget QuanlityButton() {
   return Container(
     child: Row(
       children: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+        IconButton(onPressed: () {}, icon: Icon(Icons.remove)),
         Container(
           alignment: Alignment.center,
           width: 20,
           child: Text("1"),
         ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+        IconButton(onPressed: () {
+        }, icon: Icon(Icons.add)),
       ],
     ),
   );

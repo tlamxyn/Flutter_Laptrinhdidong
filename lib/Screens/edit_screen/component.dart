@@ -22,13 +22,17 @@ Container Edit1(BuildContext context) {
             style: TextStyle(color: Colors.black, fontSize: 25),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.all(40),
-        ),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.save),
-        ),
+        Expanded(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.save),
+              ),
+            ],
+          ),
+        )
       ],
     ),
   );

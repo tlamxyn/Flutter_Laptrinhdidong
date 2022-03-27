@@ -2,36 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:shop/Screens/dathanhtoan_screen/dathanhtoan_screen.dart';
 import 'package:shop/Screens/edit_screen/edit_screen.dart';
 
-Container thanhtoan1(BuildContext context) {
+Container Tieu_De(BuildContext context) {
   return Container(
-    alignment: Alignment.bottomLeft,
     height: MediaQuery.of(context).size.height / 10,
     width: double.infinity,
-    color: Colors.purple[300],
-    child: Row(
-      children: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.account_box_sharp),
-        ),
-        const Padding(
-          padding: EdgeInsets.only(top: 15, right: 10, bottom: 15, left: 10),
-          child: Text(
-            "Thông tin thanh toán",
-            style: TextStyle(color: Colors.black, fontSize: 25),
-          ),
-        ),
-        const Padding(
-          padding: EdgeInsets.all(40),
-        ),
+    decoration: BoxDecoration(
+        gradient: LinearGradient(
+      begin: Alignment.centerLeft,
+      end: Alignment.centerRight,
+      colors: [
+        Color.fromARGB(255, 236, 144, 250),
+        Color.fromARGB(255, 202, 12, 231),
+        Color.fromARGB(255, 202, 22, 230),
+        Color.fromARGB(255, 202, 12, 231),
+        Color.fromARGB(255, 236, 144, 250),
       ],
+    )),
+    child: const Center(
+      child: Padding(
+        padding: EdgeInsets.only(top: 15, right: 10, bottom: 15, left: 10),
+        child: Text(
+          "Thông tin thanh toán",
+          style: TextStyle(color: Colors.white, fontSize: 25),
+        ),
+      ),
     ),
   );
 }
 
 Container thanhtoan3(BuildContext context) {
   return Container(
-    padding: const EdgeInsets.all(5),
     child: const TextField(
       decoration: InputDecoration(
         border: OutlineInputBorder(),
@@ -55,7 +55,6 @@ Container thanhtoan3(BuildContext context) {
 
 Container thanhtoan5(BuildContext context) {
   return Container(
-    padding: const EdgeInsets.all(5),
     child: TextField(
       decoration: InputDecoration(
         border: OutlineInputBorder(),
@@ -79,7 +78,6 @@ Container thanhtoan5(BuildContext context) {
 
 Container thanhtoan7(BuildContext context) {
   return Container(
-    padding: const EdgeInsets.all(5),
     child: TextField(
       decoration: InputDecoration(
         border: OutlineInputBorder(),
@@ -91,7 +89,6 @@ Container thanhtoan7(BuildContext context) {
 
 Container thanhtoan8(BuildContext context) {
   return Container(
-    padding: const EdgeInsets.all(5),
     child: TextField(
       decoration: InputDecoration(
         border: OutlineInputBorder(),
