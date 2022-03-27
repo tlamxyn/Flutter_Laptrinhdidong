@@ -17,10 +17,11 @@ class _DATHANGState extends State<DATHANG> {
       body: ListView(
         children: [
           dathang1(context),
-          dathang2(context),
-          dathang3(context),
-          dathang4(context),
-          dathang5(context),
+          sanphamforDatHang(context),
+          sanphamforDatHang(context),
+          NguoiDatHang(context),
+          TongTien(),
+          DatHangButton(context),
           //CartItem(context),
         ],
       ),

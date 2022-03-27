@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop/Screens/edit_screen/edit_screen.dart';
 import 'package:shop/Screens/home_screen/home_screen.dart';
 import 'package:shop/Screens/thanhtoan_screen/thanhtoan_screen.dart';
 
@@ -34,268 +33,121 @@ Container dathanhtoan1(BuildContext context) {
   );
 }
 
-Container dathanhtoan2(BuildContext context) {
+Container sanphamforDatHang(BuildContext context) {
   return Container(
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 8,
-    width: double.infinity,
-    color: Colors.white70,
-    child: Row(
-      children: [
-        Container(
-          color: Colors.white70,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: 200,
-                alignment: Alignment.center,
-                child: Image.asset(
-                  "lib/images/download.jpg",
-                  height: 70,
-                  width: 70,
-                ),
-              ),
-              const Text(
-                "SL:1",
-                style: TextStyle(color: Colors.black, fontSize: 20),
-              ),
-              const Padding(
-                padding: EdgeInsets.all(30),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(top: 10, bottom: 10),
-                      child: const Text(
-                        "Máy tính Mac",
-                        style: TextStyle(color: Colors.black, fontSize: 30),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text("đơn giá:"),
-                        const Padding(
-                          padding: EdgeInsets.all(9),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.all(6),
-                        ),
-                        Text(
-                          "20.000.000 đ",
-                          style: TextStyle(
-                            color: Colors.red,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
-                        Text("Tổng tiền:"),
-                        const Padding(
-                          padding: EdgeInsets.all(10),
-                        ),
-                        Text(
-                          "20.000.000 đ",
-                          style: TextStyle(
-                            color: Colors.red,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
+    margin: EdgeInsets.symmetric(vertical: 10),
+    padding: EdgeInsets.only(left: 5),
+    decoration: BoxDecoration(
+      color: Colors.orange[300],
+      borderRadius: BorderRadius.circular(10),
     ),
+    height: 120,
+    child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white54,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+          Expanded(
+              flex: 1,
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "lib/images/download.jpg",
+                      height: 70,
+                      width: 90,
+                      fit: BoxFit.fill,
+                    ),
+                    const Text("Số lượng: 1")
+                  ])),
+          Expanded(
+            flex: 3,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Máy Mac33-Plus",
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black45),
+                ),
+                Text(
+                  'Đơn Giá: 2000000',
+                  style: TextStyle(color: Colors.red[300]),
+                ),
+                Text(
+                  "Tổng: 2000000",
+                  style: TextStyle(color: Colors.red[300]),
+                ),
+              ],
+            ),
+          ),
+        ])),
   );
 }
 
-Container dathanhtoan3(BuildContext context) {
+Container ThongTinNguoiMua(BuildContext context) {
   return Container(
-    margin: EdgeInsets.only(
-      top: 10,
-    ),
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 8,
+    margin: const EdgeInsets.symmetric(horizontal: 10),
+    padding: const EdgeInsets.all(15),
     width: double.infinity,
-    color: Colors.white70,
-    child: Row(
-      children: [
-        Container(
-          color: Colors.white70,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: 200,
-                alignment: Alignment.center,
-                child: Image.asset(
-                  "lib/images/download.jpg",
-                  height: 70,
-                  width: 70,
-                ),
-              ),
-              const Text(
-                "SL:1",
-                style: TextStyle(color: Colors.black, fontSize: 20),
-              ),
-              const Padding(
-                padding: EdgeInsets.all(30),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(top: 10, bottom: 10),
-                      child: const Text(
-                        "Máy tính Mac",
-                        style: TextStyle(color: Colors.black, fontSize: 30),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text("đơn giá:"),
-                        const Padding(
-                          padding: EdgeInsets.all(9),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.all(6),
-                        ),
-                        Text(
-                          "20.000.000 đ",
-                          style: TextStyle(
-                            color: Colors.red,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
-                        Text("Tổng tiền:"),
-                        const Padding(
-                          padding: EdgeInsets.all(10),
-                        ),
-                        Text(
-                          "20.000.000 đ",
-                          style: TextStyle(
-                            color: Colors.red,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
-  );
-}
-
-Container dathanhtoan4(BuildContext context) {
-  return Container(
-    margin: const EdgeInsets.only(top: 0),
-    alignment: Alignment.bottomLeft,
-    height: 240,
-    width: double.infinity,
-    color: Colors.white,
+    decoration: BoxDecoration(
+        border: Border.fromBorderSide(BorderSide(color: Colors.black38))),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Text(
-          "Người đặt hàng:Trần Lam",
-          style: TextStyle(color: Colors.red, fontSize: 24),
-        ),
+        Text("Người đặt hàng: Trần Lam",
+            style: TextStyle(color: Colors.black54, fontSize: 18)),
         const Padding(
           padding: EdgeInsets.all(10),
         ),
-        Text(
-          "SĐT:012315455",
-          style: TextStyle(color: Colors.red, fontSize: 24),
-        ),
+        Text("SĐT:012315455",
+            style: TextStyle(color: Colors.black54, fontSize: 18)),
         const Padding(
           padding: EdgeInsets.all(10),
         ),
         Text("Thời gian đặt hàng:20/10/2020",
-            style: TextStyle(color: Colors.red, fontSize: 24)),
+            style: TextStyle(color: Colors.black54, fontSize: 18)),
         const Padding(
           padding: EdgeInsets.all(10),
         ),
         const Text("Địa chỉ: 236 lê văn lương",
-            style: TextStyle(color: Colors.red, fontSize: 24)),
+            style: TextStyle(color: Colors.black54, fontSize: 18)),
         const Padding(
           padding: EdgeInsets.all(10),
         ),
         Text("Ghi chú: hàng dễ vỡ xin nhẹ tay",
-            style: TextStyle(color: Colors.red, fontSize: 24)),
+            style: TextStyle(color: Colors.black54, fontSize: 18)),
       ],
     ),
   );
 }
 
-Padding dathanhtoan5(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(0),
-    child: ElevatedButton(
-      style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
-      onPressed: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => PageContent()));
-      },
-      child: const SizedBox(
-        child: Center(
-          child: Text("Đã thanh toán"),
-        ),
-        height: 53,
-        width: 260,
-      ),
-    ),
-  );
-}
-
-Container dathanhtoan6(BuildContext context) {
+Container TongTien() {
   return Container(
-    margin: const EdgeInsets.only(top: 10),
-    alignment: Alignment.bottomLeft,
-    height: 40,
-    width: double.infinity,
-    color: Colors.yellow,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      //crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          "Tổng thanh toán",
-          style: TextStyle(color: Colors.red, fontSize: 24),
-        ),
-        const Padding(
-          padding: EdgeInsets.all(25),
-        ),
-        Text(
-          "40.000.000 đ",
-          style: TextStyle(color: Colors.red, fontSize: 24),
-        ),
-        const Padding(
-          padding: EdgeInsets.all(10),
-        ),
-      ],
+    margin: const EdgeInsets.symmetric(horizontal: 10),
+    padding: const EdgeInsets.all(15),
+    child: Text(
+      'Tổng tiền: 4000000',
+      style: TextStyle(fontSize: 22, color: Colors.red[400]),
     ),
+  );
+}
+
+Container DaThanhToan(BuildContext context) {
+  return Container(
+    margin: const EdgeInsets.symmetric(horizontal: 20),
+    height: 53,
+    decoration: const BoxDecoration(
+      border: Border.fromBorderSide(BorderSide(color: Color.fromARGB(255, 129, 199, 132), width: 7
+      ))
+    ),
+    child: Center(child: const Text('Đã Thanh Toán', style: TextStyle(fontSize: 18, color: Color.fromARGB(255, 14, 133, 20)),))
   );
 }
 
@@ -305,12 +157,13 @@ Padding dathanhtoan7(BuildContext context) {
     child: ElevatedButton(
       style: ElevatedButton.styleFrom(primary: Colors.black),
       onPressed: () {
+        
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => PageContent()));
       },
       child: const SizedBox(
         child: Center(
-          child: Text("Huỷ đơn"),
+          child: Text("Huỷ đơn", style: TextStyle(fontSize: 18),),
         ),
         height: 50,
         width: 100,

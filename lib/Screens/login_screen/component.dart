@@ -1,70 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shop/Screens/edit_screen/edit_screen.dart';
 import 'package:shop/Screens/home_screen/home_screen.dart';
 import 'package:shop/Screens/signup_screen/signup_screen.dart';
 import 'package:shop/Screens/thanhtoan_screen/thanhtoan_screen.dart';
+import 'package:shop/provider/providerdangnhap.dart';
 
 import '../main_content.dart';
 
-Container dangnhap1(BuildContext context) {
+Container AppName(BuildContext context, String name) {
   return Container(
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 10,
-    width: double.infinity,
-    color: Colors.purple[300],
-    child: Row(
-      children: [
-        IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(Icons.payment),
-        ),
-        const Padding(
-          padding: EdgeInsets.only(top: 15, right: 10, bottom: 15, left: 80),
-          child: Text(
-            "My App",
-            style: TextStyle(color: Colors.black, fontSize: 25),
-          ),
-        ),
-        const Padding(
-          padding: EdgeInsets.all(40),
-        ),
-      ],
-    ),
-  );
-}
-
-Padding dangnhap2(BuildContext context) {
-  return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'User Name',
+    alignment: Alignment.center,
+    margin: const EdgeInsets.symmetric(vertical: 40),
+    child: Text(
+      name,
+      style: TextStyle(
+        color: Colors.amber[200],
+        fontSize: 40,
+        fontWeight: FontWeight.bold,
       ),
     ),
   );
 }
 
-Padding dangnhap3(BuildContext context) {
-  return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+Container InputL(BuildContext context, TextEditingController controller,
+    String label, bool obscure) {
+  return Container(
+    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
     child: TextField(
+      keyboardType: obscure ? TextInputType.text : TextInputType.emailAddress,
+      obscureText: obscure ? true : false,
+      controller: controller,
       decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Password',
+        fillColor: Colors.white60,
+        filled: true,
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+        labelText: label,
       ),
     ),
   );
 }
 
-Padding dangnhap4(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(0),
+Container dangnhap4(BuildContext context, String a, String b) {
+  return Container(
+    margin: const EdgeInsets.only(top: 30),
+    padding: const EdgeInsets.symmetric(horizontal: 40),
     child: ElevatedButton(
-      style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
-      onPressed: () {
+      style: ElevatedButton.styleFrom(
+          primary: Colors.blueAccent,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50))),
+      onPressed: () async {
+        // await Provider.of<dangnhapProvider>(context, listen: false).login(a, b);
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => PageContent()));
       },
@@ -79,11 +66,15 @@ Padding dangnhap4(BuildContext context) {
   );
 }
 
-Padding dangnhap5(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(30),
+Container dangnhap5(BuildContext context) {
+  return Container(
+    margin: const EdgeInsets.only(top: 10),
+    padding: const EdgeInsets.symmetric(horizontal: 40),
     child: ElevatedButton(
-      style: ElevatedButton.styleFrom(primary: Colors.black),
+      style: ElevatedButton.styleFrom(
+          primary: Colors.black,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50))),
       onPressed: () {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => dangky()));

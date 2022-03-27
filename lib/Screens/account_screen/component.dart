@@ -1,31 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:shop/Screens/edit_screen/edit_screen.dart';
+import 'package:shop/Screens/hoadon_screen/hoadon_screen.dart';
 
-Container Account1(BuildContext context) {
+Container UserTile(BuildContext context) {
   return Container(
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 10,
-    width: double.infinity,
-    color: Colors.purple[300],
+    height: 90,
+    color: Colors.purple[100],
     child: Row(
       children: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.account_box_sharp),
-        ),
-        const Padding(
-          padding: EdgeInsets.only(top: 15, right: 10, bottom: 15, left: 10),
-          child: Text(
-            "Id:0306191386",
-            style: TextStyle(color: Colors.black, fontSize: 25),
-          ),
-        ),
-        const Padding(
-          padding: EdgeInsets.all(40),
-        ),
+        Expanded(
+            flex: 1,
+            child: Container(
+                margin: const EdgeInsets.all(15),
+                child: Image.asset('lib/images/user.jpg',
+                    width: 700, height: 90, fit: BoxFit.fill))),
+        Expanded(
+            flex: 3,
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: const [
+                  Text(
+                    "Username: Kali",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  ),
+                  
+                  Text(
+                    "Email: tlamxyn@gmail.com",
+                    style: TextStyle(color: Colors.black, fontSize: 16),
+                  )
+                ])),
         IconButton(
           onPressed: () {
             // chuyển qua màn hình sửa thông tin
+            
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => EditScreen()));
           },
@@ -36,121 +44,60 @@ Container Account1(BuildContext context) {
   );
 }
 
-Container Account2(BuildContext context) {
+Container toHoaDon(BuildContext context) {
   return Container(
     padding: const EdgeInsets.only(top: 15, right: 0, bottom: 15, left: 0),
-    width: MediaQuery.of(context).size.width,
-    height: 150,
     child: Column(
       children: [
         Container(
-          alignment: Alignment.topRight,
-          width: double.infinity,
-          height: 1,
-          child: const Icon(Icons.cancel),
-        ),
-        Container(
-          color: Colors.purple[100],
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.menu),
-              ),
-              Container(
-                height: 90,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+            height: 60,
+            color: Colors.purple[100],
+            child: ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Colors.purple[300]),
+                onPressed: () {
+                  Navigator.push(
+                context, MaterialPageRoute(builder: (context) => HoaDonScreen()));
+          
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    const Icon(Icons.menu_book),
                     Container(
-                      padding: const EdgeInsets.only(left: 10, top: 3),
-                      child: const Text(
-                        "Hoá đơn",
-                        softWrap: true,
-                        style: TextStyle(color: Colors.black, fontSize: 20),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.only(left: 10, top: 3),
+                            child: const Text(
+                              "Hoá đơn",
+                              softWrap: true,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
-                ),
-              ),
-            ],
-          ),
-        ),
+                ))),
       ],
     ),
   );
 }
 
-Container Account3(BuildContext context) {
+Container Info(BuildContext context, String text) {
   return Container(
+    margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
     padding: const EdgeInsets.all(5),
-    child: const TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Họ và tên',
-      ),
-    ),
-  );
-}
-
-Container Account4(BuildContext context) {
-  return Container(
-    padding: const EdgeInsets.all(5),
-    child: const TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Giới tính',
-      ),
-    ),
-  );
-}
-
-Container Account5(BuildContext context) {
-  return Container(
-    padding: const EdgeInsets.all(5),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'SĐT',
-      ),
-    ),
-  );
-}
-
-Container Account6(BuildContext context) {
-  return Container(
-    padding: const EdgeInsets.all(5),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Ngày sinh',
-      ),
-    ),
-  );
-}
-
-Container Account7(BuildContext context) {
-  return Container(
-    padding: const EdgeInsets.all(5),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Email',
-      ),
-    ),
-  );
-}
-
-Container Account8(BuildContext context) {
-  return Container(
-    padding: const EdgeInsets.all(5),
-    child: TextField(
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Địa chỉ',
-      ),
+    decoration: const BoxDecoration(
+        border: Border(bottom: BorderSide(color: Colors.black45, width: 2))),
+    child: Text(
+      text,
+      style: TextStyle(color: Colors.black87, fontSize: 18),
     ),
   );
 }

@@ -11,6 +11,7 @@ List<Widget> cartItems = [];
 
 class _thanhtoanScreenState extends State<thanhtoanScreen> {
   bool isChecked = false;
+  PayWay _payWay = PayWay.momo;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,10 +25,16 @@ class _thanhtoanScreenState extends State<thanhtoanScreen> {
           thanhtoan7(context),
           thanhtoan8(context),
           thanhtoan9(context),
-          thanhtoan10(context),
-          thanhtoan11(context),
-          thanhtoan12(context),
-          thanhtoan13(context),
+          LoaiThanhToan(payWay: _payWay, isMomo: true, text: "Momo", img: "lib/images/momo.png", onChanged: (PayWay? value){
+            setState(() {
+              _payWay = value!;
+            });
+          },),
+          LoaiThanhToan(payWay: _payWay, isMomo: false, text: "ZaloPay", img: "lib/images/zalopay.png", onChanged: (PayWay? value){
+            setState(() {
+              _payWay = value!;
+            });
+          },),
           thanhtoan14(context),
           //CartItem(context),
         ],

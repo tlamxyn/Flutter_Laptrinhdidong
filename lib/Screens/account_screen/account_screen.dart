@@ -16,14 +16,13 @@ class _AccountScreenState extends State<AccountScreen> {
     return Scaffold(
       body: ListView(
         children: [
-          Account1(context),
-          Account2(context),
-          Account3(context),
-          Account4(context),
-          Account5(context),
-          Account6(context),
-          Account7(context),
-          Account8(context),
+          UserTile(context),
+          toHoaDon(context),
+          Info(context, "Họ và tên: Đặng Trần Lam"),
+          Info(context, "Giới tính: Nam"),
+          Info(context, "Ngày sinh: 04/03/2001"),
+          Info(context, "Email: tlamxyn@gmail.com"),
+          Info(context, "Địa chỉ: TP.HCM"),
           //CartItem(context),
         ],
       ),

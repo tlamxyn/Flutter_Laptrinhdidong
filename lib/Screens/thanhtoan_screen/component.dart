@@ -128,173 +128,26 @@ Container thanhtoan9(BuildContext context) {
   );
 }
 
-Container thanhtoan10(BuildContext context) {
-  return Container(
-    margin: EdgeInsets.only(
-      top: 10,
-    ),
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 16,
-    width: double.infinity,
-    color: Colors.white,
-    child: Row(
-      children: [
-        Container(
-          color: Colors.white,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // Radio(value: 1,
-              // onChanged: (value){},),
-              Container(
-                height: 200,
-                alignment: Alignment.center,
-                child: Image.asset(
-                  "lib/images/download.jpg",
-                  height: 70,
-                  width: 70,
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.all(30),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(top: 10, bottom: 10),
-                      child: const Text(
-                        "Ví điện tử ZaloPay",
-                        style: TextStyle(color: Colors.black, fontSize: 20),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
-  );
-}
+enum PayWay{momo, zalopay}
 
-Container thanhtoan11(BuildContext context) {
-  return Container(
-    margin: EdgeInsets.only(
-      top: 10,
-    ),
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 16,
-    width: double.infinity,
-    color: Colors.white,
-    child: Row(
-      children: [
-        Container(
-          color: Colors.white,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // Radio(value: 1,
-              // onChanged: (value){},),
-              Container(
-                height: 200,
-                alignment: Alignment.center,
-                child: Image.asset(
-                  "lib/images/download.jpg",
-                  height: 70,
-                  width: 70,
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.all(30),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(top: 10, bottom: 10),
-                      child: const Text(
-                        "Ví điện tử Momo",
-                        style: TextStyle(color: Colors.black, fontSize: 20),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
-  );
-}
+class LoaiThanhToan extends StatelessWidget{
+  PayWay? payWay;
+  bool isMomo;
+  String text;
+  String img;
+  final void Function(PayWay? value)? onChanged;
+  LoaiThanhToan({Key? key, this.payWay, required this.isMomo, required this.text, this.onChanged, required this.img}) : super(key: key);
 
-Container thanhtoan12(BuildContext context) {
-  return Container(
-    margin: EdgeInsets.only(
-      top: 10,
-    ),
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 16,
-    width: double.infinity,
-    color: Colors.white,
-    child: Row(
-      children: [
-        Container(
-          color: Colors.white,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: 200,
-                alignment: Alignment.center,
-                child: Image.asset(
-                  "lib/images/download.jpg",
-                  height: 70,
-                  width: 70,
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.all(30),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.only(top: 10, bottom: 10),
-                      child: const Text(
-                        "Ví điện tử Momo",
-                        style: TextStyle(color: Colors.black, fontSize: 20),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
-  );
-}
 
-Container thanhtoan13(BuildContext context) {
-  return Container(
-    margin: EdgeInsets.only(
-      top: 10,
+  @override
+  Widget build(BuildContext context) {
+  return ListTile(
+    leading: Radio<PayWay>(
+      value: isMomo ? PayWay.momo : PayWay.zalopay,
+      groupValue: payWay,
+      onChanged: onChanged,
     ),
-    alignment: Alignment.bottomLeft,
-    height: MediaQuery.of(context).size.height / 16,
-    width: double.infinity,
-    color: Colors.white,
-    child: Row(
+    title: Row(
       children: [
         Container(
           color: Colors.white,
@@ -302,15 +155,12 @@ Container thanhtoan13(BuildContext context) {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                height: 200,
-                alignment: Alignment.center,
-                child: Image.asset(
-                  "lib/images/download.jpg",
+               Image.asset(
+                  img,
                   height: 70,
                   width: 70,
+                  fit: BoxFit.fill,
                 ),
-              ),
               const Padding(
                 padding: EdgeInsets.all(30),
               ),
@@ -320,8 +170,8 @@ Container thanhtoan13(BuildContext context) {
                   children: [
                     Container(
                       padding: const EdgeInsets.only(top: 10, bottom: 10),
-                      child: const Text(
-                        "Ví điện tử Momo",
+                      child: Text(
+                        text,
                         style: TextStyle(color: Colors.black, fontSize: 20),
                       ),
                     ),
@@ -334,6 +184,7 @@ Container thanhtoan13(BuildContext context) {
       ],
     ),
   );
+  }
 }
 
 Padding thanhtoan14(BuildContext context) {

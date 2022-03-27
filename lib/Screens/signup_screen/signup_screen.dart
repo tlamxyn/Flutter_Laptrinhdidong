@@ -10,19 +10,30 @@ class dangky extends StatefulWidget {
 List<Widget> cartItems = [];
 
 class _dangkyState extends State<dangky> {
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+  TextEditingController password_comfirmation = TextEditingController();
   bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          dangky1(context),
-          dangky2(context),
-          dangky3(context),
-          dangky4(context),
-          dangky5(context),
-          //CartItem(context),
-        ],
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Colors.purple, Colors.white],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight),
+        ),
+        child: ListView(
+          children: [
+            AppName(context, "My App"),
+            InputL(context, email, "Email", false),
+            InputL(context, password, "Password", true),
+            InputL(context, password_comfirmation, "Password Comfirm", true),
+            DangKyButton(context),
+            //CartItem(context),
+          ],
+        ),
       ),
     );
   }

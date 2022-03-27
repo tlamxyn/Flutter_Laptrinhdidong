@@ -16,10 +16,13 @@ class _notificationState extends State<notification> {
     return Scaffold(
       body: ListView(
         children: [
-          notification1(context),
-          notification2(context),
-          notification3(context),
-          notification4(context),
+          notification1(context, "Khuyến mãi", const Icon(Icons.local_post_office)),
+          const SizedBox(height: 15),
+          notification1(context, "Tin hot", const Icon(Icons.speaker_rounded)),
+          const SizedBox(height: 15),
+          notification1(context, "Chuyển hàng", const Icon(Icons.airport_shuttle)),
+          const SizedBox(height: 15),
+          notification1(context, "Gợi ý", const Icon(Icons.lightbulb_sharp)),
           //CartItem(context),
         ],
       ),

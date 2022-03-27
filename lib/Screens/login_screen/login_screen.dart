@@ -11,18 +11,35 @@ List<Widget> cartItems = [];
 
 class _dangnhapState extends State<dangnhap> {
   bool isChecked = false;
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+  @override
+  void initState() {
+    email = TextEditingController();
+    password = TextEditingController();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          dangnhap1(context),
-          dangnhap2(context),
-          dangnhap3(context),
-          dangnhap4(context),
-          dangnhap5(context),
-          //CartItem(context),
-        ],
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Colors.purple, Colors.white],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight),
+        ),
+        child: ListView(
+          children: [
+            AppName(context, "My App"),
+            InputL(context, email, "Email", false),
+            InputL(context, password, "Password", true),
+            dangnhap4(context, email.text, password.text),
+            dangnhap5(context),
+            //CartItem(context),
+          ],
+        ),
       ),
     );
   }
