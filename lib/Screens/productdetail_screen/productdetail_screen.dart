@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/Screens/thanhtoan_screen/thanhtoan_screen.dart';
+
 import 'component.dart';
 
 class ProductDetailScreen extends StatefulWidget {
@@ -179,7 +181,9 @@ class ProductDetailScreenState extends State<ProductDetailScreen> {
                   child: Padding(
                       padding: EdgeInsets.symmetric(vertical: 15),
                       child: Icon(Icons.arrow_back)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                 )),
                 Expanded(
                     child: TextButton(
@@ -210,7 +214,12 @@ class ProductDetailScreenState extends State<ProductDetailScreen> {
                       child: Text("MUA NGAY",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => thanhtoanScreen()));
+                  },
                 )),
               ],
             ),

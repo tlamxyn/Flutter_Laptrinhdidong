@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/Screens/thanhtoan_screen/thanhtoan_screen.dart';
 
 Container NoCartItemNotification(BuildContext context) {
   return Container(
@@ -28,8 +29,8 @@ Container CartItem(BuildContext context) {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Checkbox(value: true, onChanged: (value) {}),
-            Image.asset("lib/images/download.jpg",width: MediaQuery
-            .of(context).size.width/8),
+            Image.asset("lib/images/download.jpg",
+                width: MediaQuery.of(context).size.width / 3),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,7 +39,7 @@ Container CartItem(BuildContext context) {
                   Padding(
                     padding: EdgeInsets.only(left: 5, right: 20),
                     child: Text(
-                      "Điện thoại abskasfasfasdfadfadfadfasfasfdasdfdfja;lf",
+                      "Điện thoại ",
                       style: TextStyle(fontSize: 16),
                     ),
                   ),
@@ -52,7 +53,7 @@ Container CartItem(BuildContext context) {
                       Padding(
                         padding: EdgeInsets.only(right: 20),
                         child: Text(
-                          "Giá",
+                          "10,000,000 đ",
                           style: TextStyle(color: Colors.red, fontSize: 16),
                         ),
                       ),
@@ -77,7 +78,7 @@ Container CartItem(BuildContext context) {
   );
 }
 
-Container CartBottomBar() {
+Container CartBottomBar(BuildContext context) {
   return Container(
     height: 35,
     child: Row(
@@ -118,21 +119,22 @@ Container CartBottomBar() {
             ),
           ),
         ),
-        const SizedBox(
-          width: 5,
-        ),
+        
         Container(
           child: TextButton(
             style: TextButton.styleFrom(
               primary: Colors.red,
               backgroundColor: Colors.yellow,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => thanhtoanScreen()));
+            },
             child: const Text(
               "MUA HÀNG",
               style: TextStyle(
                 color: Color(0xFF4A148C),
-                fontSize: 35,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -147,13 +149,14 @@ Widget QuanlityButton() {
   return Container(
     child: Row(
       children: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+        IconButton(onPressed: () {}, icon: Icon(Icons.remove)),
         Container(
           alignment: Alignment.center,
           width: 20,
           child: Text("1"),
         ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+        IconButton(onPressed: () {
+        }, icon: Icon(Icons.add)),
       ],
     ),
   );

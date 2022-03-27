@@ -19,13 +19,11 @@ class _CartScreenState extends State<CartScreen> {
         children: [
           Expanded(
             child: ListView(children: [
-              NoCartItemNotification(context),
-              CartItem(context),
               CartItem(context),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  LabelForList("CÓ THỂ BẠN CŨNG THÍCH"),
+                  LabelForList("CÓ THỂ BẠN THÍCH"),
                   const SizedBox(
                     height: 15,
                   ),
@@ -48,7 +46,7 @@ class _CartScreenState extends State<CartScreen> {
                         ProductCard(context, "lib/images/download.jpg",
                             "Điện thoại hiếm", "14500000"),
                         ProductCard(context, "lib/images/download.jpg",
-                            "Điện thoại hiếm", "24500000"),
+                            "Điện thoại Sale 30%", "24500000"),
                       ],
                     ),
                   ),
@@ -56,7 +54,7 @@ class _CartScreenState extends State<CartScreen> {
               ),
             ]),
           ),
-          CartBottomBar(),
+          CartBottomBar(context),
         ],
       ),
     );

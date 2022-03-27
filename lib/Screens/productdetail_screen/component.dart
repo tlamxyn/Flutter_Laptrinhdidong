@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-Widget Product_Info1(String imageName, String productName, int price, double rating, int soldout) {
+Widget Product_Info1(String imageName, String productName, int price,
+    double rating, int soldout) {
   String formated_price = NumberFormat('#,##,000').format(price);
   return Container(
     decoration: BoxDecoration(
