@@ -14,12 +14,12 @@
 
 ### Sử dụng Git
 
-1. Mở ``VisuoStudioCode``
-2. Mở ``Terminal``
-3. Nhập lệnh ``git clone https://github.com/tlamxyn/Flutter_Laptrinhdidong.git``
-4. ``cd Flutter_Laptrinhdidong``
-5. Chọn thiết bị chạy
-6. ``flutter run``
+> 1. Mở ``VisuoStudioCode``
+> 2. Mở ``Terminal``
+> 3. Nhập lệnh ``git clone https://github.com/tlamxyn/Flutter_Laptrinhdidong.git``
+> 4. ``cd Flutter_Laptrinhdidong``
+> 5. Chọn thiết bị chạy
+> 6. ``flutter run``
 
 ## Ảnh đồ án
 
