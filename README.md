@@ -1,16 +1,31 @@
 # shop
 
-A new Flutter project.
+## Đồ án môn học: Lập trình di động
 
-## Getting Started
+> - Language: Dart
+> - Framework: Flutter
+> - Đã hoàn thành: UI
+> - Chưa làm được: thực hiện tạo API và 
+> - Thành viên:
+>     - Đặng Trần Lam - tlamxyn@gmail.com
+>     - Lê Tất Anh Tuấn - 0306191386@caothang.edu.vn (email dùng làm đồ án) và tuanle0903541031@gmail.com (email hiện tại)
 
-This project is a starting point for a Flutter application.
+## Hướng dẫn tải và chạy đồ án
 
-A few resources to get you started if this is your first Flutter project:
+### Sử dụng Git
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+1. Mở ``VisuoStudioCode``
+2. Mở ``Terminal``
+3. Nhập lệnh ``git clone https://github.com/tlamxyn/Flutter_Laptrinhdidong.git``
+4. ``cd Flutter_Laptrinhdidong``
+5. Chọn thiết bị chạy
+6. ``flutter run``
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Ảnh đồ án
+
+![Trang Chủ](/assets/image/TrangChu.png)
+![Trang Chủ](/assets/image/DangNhap.png)
+![Trang Chủ](/assets/image/ChiTietSanPham.png)
+![Trang Chủ](/assets/image/ChiTietHoaDon.png)
+![Trang Chủ](/assets/image/YeuCauThanhToan.png)
+![Trang Chủ](/assets/image/NguoiDung.png)
