@@ -53,8 +53,9 @@ Container DangKyButton(BuildContext context) {
         Navigator.pop(context);
       },
       child: const SizedBox(
+        height: 40,
         child: Center(
-          child: Text("Đăng ký"),
+          child: Text("Đăng ký", style: TextStyle(fontSize: 18)),
         ),
       ),
     ),

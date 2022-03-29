@@ -56,8 +56,9 @@ Container dangnhap4(BuildContext context, String a, String b) {
             context, MaterialPageRoute(builder: (context) => PageContent()));
       },
       child: const SizedBox(
+        height: 40,
         child: Center(
-          child: Text("Đăng nhập"),
+          child: Text("Đăng nhập", style: TextStyle(fontSize: 18),),
         ),
       ),
     ),
@@ -78,8 +79,9 @@ Container dangnhap5(BuildContext context) {
             context, MaterialPageRoute(builder: (context) => dangky()));
       },
       child: const SizedBox(
+        height: 40,
         child: Center(
-          child: Text("Chưa có tài khoản"),
+          child: Text("Chưa có tài khoản", style: TextStyle(fontSize: 18),),
         ),
       ),
     ),
